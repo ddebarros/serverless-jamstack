@@ -1,7 +1,7 @@
 //start of get request to retrieve available coffees
 
 const getInventory = async () => {
-  let getUrl = '/api/getCoffee'
+  let getUrl = '/api/api/getCoffee'
   let results = await axios.get(getUrl);
 results.data.forEach(item => {
   let pic = item.pic;
@@ -74,7 +74,7 @@ const cartHandler = function() {
 let subscribeButton = document.getElementById("subscribe");
 const subscribeHandler = async function() {
   let email = document.getElementById("email").value
-  let postEmail = '/api/postEmail';
+  let postEmail = 'api/api/postEmail';
   let emailUrl = postEmail + "?email=" + email;
   await axios.post(emailUrl);
   localStorage.setItem("subscribe", email);
