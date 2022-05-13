@@ -1,0 +1,14 @@
+packages:
+  - name: api
+    actions:
+      - name: getCoffee
+        limits:
+          timeout: 5000
+          memory: 256
+      - name: postEmail
+        limits:
+          timeout: 5000
+          memory: 256
+environment:
+  DATABASE_URL: "${DATABASE_URL}"
+  CA_CERT: $(CA_CERT)
