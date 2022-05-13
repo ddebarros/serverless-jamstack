@@ -2,7 +2,7 @@
 
 const getInventory = async () => {
   let getUrl = '/api/getCoffee'
-  let results = await axios.get('getUrl');
+  let results = await axios.get(getUrl);
 results.data.forEach(item => {
   let pic = item.pic;
   let name = item.name;
